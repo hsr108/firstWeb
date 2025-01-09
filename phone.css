@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.navBar {
+    background-color: rgba(47, 47, 47, 0.3);
+    padding: 10px 0px;
+
+    .awaazLink {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+.hNavPhone {
+    height: 45px;
+}
+
+.visibPhone {
+    opacity: 0;
+}
+
+.navContent {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    position: sticky;
+}
+
+.navContent li a {
+    padding: 0px 40px;
+}
+
+.logo {
+    align-self: flex-start;
+    padding: 40px 40px 0px;
+}
+
+.burger {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 20px;
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+}
+
+.complete {
+    flex-direction: column;
+}
+
+.leftSide {
+    width: 100%;
+    align-self: center;
+}
+
+.rightSide {
+    width: 100%;
+    align-self: center;
+}
+
+.temperature,
+.sunrise,
+.sunset,
+.humidity,
+.windSpeed {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#about {
+    font-size: 20px;
+}
+
+#about p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.awaazLogo {
+    width: 150px;
+    padding: 30px;
+    align-self: center;
+}
+
+.awaazIntro {
+    flex-direction: column;
+}
+
+.paraAwaaz {
+    padding: 15px;
+}
+
+.firstParaAwaaz {
+    margin-bottom: 0px;
+}
+
+.awaazLink {
+    padding: 20px 0px 10px;
+    font-size: 18px;
+    text-align: center;
+}

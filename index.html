@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1070px)" href="phone.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4052/4052984.png">
+    <title>Weather 2.0</title>
+</head>
+
+<body>
+    <nav class="navBar hNavPhone">
+        <ul class="navContent visibPhone">
+            <div class="logo"><img src="https://freesvg.org/img/sivvus_weather_symbols_2.png" alt="logo"></div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services"  onclick="alert('No Services Available, Sorry for Inconvenience Caused.')">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div id="home">
+        <div id="mainPage">
+            <input type="search" name="searchBar" id="city" placeholder="Search">
+            <button class="btn btnSmall" type="submit" id="submit">Search For City</button>
+            <div class="complete">
+                <div class="leftSide">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQBJREFUaN7t2csNwyAMBmBGYYSMwhgdgxEYjRW6ARu4HNyqB0CKednElf5b2/hLSALGAICRHKMABSjgUMDdD7xfLifkxByoJOJ33O3/nwHIhVgsKDWKriXhb+0WQD6wJxZegvhlADzrcUDhpeFlpwLyAa5BZ711Na4pgAXFNxFdABw2K4r/R9iRgLiw+N89MQSATxvYFN8F2DB0qkOJCggbi/8m9AASA0AiAXBuA0ziKIDACBAogMgIECkAYBUFKEABzwOIf4yKf5HJnkqIn8wxmk775y5oxC8pj1jUH9FWEd/YOqK1eERz94j2euFqUCF7NzjYbzHpLqUCFKCAJfkAq7RimK7qUtAAAAAASUVORK5CYII="
+                        alt="sunny weather">
+                    <h1 id="region">Region</h1>
+                    <p id="currentDate"></p>
+                </div>
+                <div class="rightSide">
+                    <div class="temperature">
+                        <img src="https://previews.123rf.com/images/akinina/akinina2002/akinina200200179/140612992-mercury-thermometer-icon-thin-line-art-logo-of-temperature-black-simple-illustration-contour.jpg"
+                            alt="temperature">                                               
+                        <p id="temper"></p>
+                    </div>
+                    <div class="sunrise">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEzwVRTwVRTxVRTwVRTwVRTxVRTxVRTwVRTwVRTxVBPwVRTwVRTwVRTwVRTwVRTwVRPwVRO9kJyXAAAAEnRSTlMAQjkU+/aqZ9v/G3G6KuyTV4Kp5R/MAAABDElEQVR4AXXS4W4EIQgE4AVBHUXR93/ZdmsvXS7X+We+BCXOFUJ8fUr6MVE+h5hcOHEFKjfqFm0ANVcAqDaBFrAAEPPe3QTAilMhPsbqfY3hAv+TtlyVW54qotMbieYyzjsNgKYlghNZSQDkdGsHhBceWQSgnM0nfCBkOCqfK01GjpgHztSLq/GMONkqHcMuGlGL41aeQN8SUXYHlC7S/3DydVHF7u9j+3nurUbvSPZaJQtbRGOx9rsKnCOyY9Lru4T70zoB6LelDEBTf1hTAJZODUpWJTaV76gxqfp6lMEhzmu778UuyNczC4DYLmWbACgBGzCtAqdnGFeIdWqnmolL/lRqnrHUMUzh+AUi7xGk00Id2AAAAABJRU5ErkJggg=="
+                            alt="sunrise">                                                
+                        <p id="sunr"></p>
+                    </div>
+                    <div class="sunset">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEzwVRTwVRTxVRTwVRTwVRTxVRTxVRTwVRTwVRTxVBPwVRTwVRTwVRTwVRTwVRTwVRPwVRO9kJyXAAAAEnRSTlMAQjkU+/aqZ9v/G3G6KuyTV4Kp5R/MAAABDElEQVR4AXXS4W4EIQgE4AVBHUXR93/ZdmsvXS7X+We+BCXOFUJ8fUr6MVE+h5hcOHEFKjfqFm0ANVcAqDaBFrAAEPPe3QTAilMhPsbqfY3hAv+TtlyVW54qotMbieYyzjsNgKYlghNZSQDkdGsHhBceWQSgnM0nfCBkOCqfK01GjpgHztSLq/GMONkqHcMuGlGL41aeQN8SUXYHlC7S/3DydVHF7u9j+3nurUbvSPZaJQtbRGOx9rsKnCOyY9Lru4T70zoB6LelDEBTf1hTAJZODUpWJTaV76gxqfp6lMEhzmu778UuyNczC4DYLmWbACgBGzCtAqdnGFeIdWqnmolL/lRqnrHUMUzh+AUi7xGk00Id2AAAAABJRU5ErkJggg=="
+                            alt="sunset">                                                
+                        <p id="suns"></p>
+                    </div>
+                    <div class="humidity">
+                        <img src="https://static.vecteezy.com/system/resources/previews/046/798/949/non_2x/drop-of-water-shape-black-and-white-silhouette-symbol-illustration-of-waterdrop-white-background-vector.jpg"
+                            alt="Humidity">                        
+                        <p id="humid"></p>
+                    </div>
+                    <div class="windSpeed">
+                        <img src="https://as1.ftcdn.net/v2/jpg/02/26/44/80/1000_F_226448016_s4GtObRGgmMSKql48PLcYQ10SFRmYEnH.jpg"
+                            alt="wind Speed">                        
+                        <p id="windSpd"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        Sorry!!!  No services available till now.
+    </div>
+    <div id="about">
+        <p class="awaaz">This website is owned by Awaaz, IIT Kharagpur</p>
+        <div class="awaazIntro">
+            <img class="awaazLogo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4KlJ-HJxLoLEQrtg-Pk_mj38aZbwU9uPkjA&s"
+                alt="Awaaz Logo">
+            <div class="paraAwaaz">
+                <p class="firstParaAwaaz">
+                    Awaaz, as said ‘The Voice of KGP’ is the main media body of IIT Kharagpur, actively reaching to the
+                    entire KGP campus, students, faculties and to the alumni network. As an independent student
+                    organization, Awaaz brings out the latest happenings, intricate campus news, the debate on the
+                    issues of
+                    general interest, make a bridge between students, faculties and college administration.
+                </p>
+                <p class="SecondParaAwaaz">
+                    Mainly, it was founded to make people aware of the latest campus happenings but with time,
+                    its realm extended and now it has become a reliable source of news. Started with a monthly
+                    newsletter, Awaaz has spread roots to social media to interact better. Awaaz has always
+                    taken the initiative to present the scenario in a better way.
+                </p>
+            </div>
+        </div>
+        <div class="awaazLink">
+            For further details visit official Awaaz Website :
+            <a href="" target="_blank">Awaaz, IIT Kharagpur</a>
+        </div>
+    </div>
+    <section id="contact">
+        <h2 class="contactHeading">Contact Us</h2>
+        <div class="formToContact">
+            <div>
+                <p class="contactName">Name</p>
+                <input class="contactName" type="text" name="name" id="name" placeholder="Enter your Full Name">
+            </div>
+            <div>
+                <p class="contactPhone">Phone Number</p>
+                <input class="contactPhone" type="text" name="phone" id="phone" placeholder="Enter your Phone Number">
+            </div>
+            <div>
+                <p class="contactEmail">E-Mail Address</p>
+                <input class="contactEmail" type="email" name="email" id="email" placeholder="Enter your E-Mail Address">
+            </div>
+        </div>
+        <button class="btn contactButton">
+            Submit
+        </button>
+    </section>
+    <footer>
+        <div class="footBottom">
+            &copy; copyright 2024 - Awaaz, IIT Kharagpur
+            <br>
+            All Rights Reserved
+            <br>
+            <a href="https://www.linkedin.com/in/harshit-singh-rathore-430794315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank">LinkedIn </a>
+            <a href="https://github.com/hsr108" target="_blank"> GitHub</a>
+            <br>
+            fake@email.com
+        </div>
+    </footer>
+
+    <script src="new.js"></script>
+</body>
+
+</html>

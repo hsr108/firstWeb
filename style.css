@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navBar {
+    display: flex;
+    background-color: rgba(47, 47, 47, 0.9);
+    position: sticky;
+    padding: 10px;
+}
+
+.navContent {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.logo {
+    width: 5%;
+}
+
+.logo img {
+    width: 80%;
+    border: 3px solid white;
+    border-radius: 50px;
+    background-color: olive;
+}
+
+.navContent li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.navContent li a {
+    text-decoration: none;
+    color: white;
+    padding: 40px;
+}
+
+.navContent li a:hover {
+    color: red;
+}
+
+
+#mainPage {
+    text-align: center;
+}
+
+#city {
+    padding: 30px 50px;
+    margin: 40px 0px;
+    font-size: 20px;
+    background-color: rgb(186, 248, 249);
+    border: 3px solid black;
+    border-radius: 50px;
+}
+
+.btn {
+    padding: 14px 20px;
+    margin-left: 23px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.complete {
+    display: flex;
+}
+
+.leftSide {
+    width: 50%;
+    padding: 50px;
+}
+
+.leftSide img {
+    width: 100px;
+}
+
+.leftSide h1 {
+    font-size: 35px;
+}
+
+.leftSide p {
+    font-size: 35px;
+}
+
+.rightSide {
+    width: 50%;
+    padding: 35px;
+}
+
+.temperature,
+.sunrise,
+.sunset,
+.humidity,
+.windSpeed {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.temperature img,
+.sunrise img,
+.sunset img,
+.humidity img,
+.windSpeed img {
+    width: 50px;
+    padding-right: 10px;
+}
+
+#services {
+    height: 7vh;
+    font-size: 30px;
+    padding: 50px;
+    background-color: rgb(189, 107, 107);
+    text-align: center;
+    justify-content: center;
+}
+
+#about {
+    background-color: rgb(251, 255, 0);
+}
+
+.awaaz {
+    padding: 70px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+.awaazLogo {
+    padding: 0% 5%;
+}
+
+.awaazIntro {
+    font-size: 18px;
+    display: flex;
+}
+
+.paraAwaaz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-right: 50px;
+}
+
+.firstParaAwaaz {
+    margin-bottom: 30px;
+}
+
+.awaazLink {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.awaazLink a {
+    text-decoration: none;
+}
+
+.awaazLink a:hover {
+    color: tomato;
+}
+
+#contact {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 0px;
+    background-color: rgb(227, 216, 216);
+}
+
+.formToContact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formToContact input {
+    width: 33%;
+    color: gray;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 18px 15px;
+    margin: 20px;
+    font-size: 13px;
+}
+
+.contactName {
+    display: inline-block;
+    margin: 50px;
+}
+
+.contactPhone {
+    display: inline-block;
+    margin: 5px;
+}
+
+.contactEmail {
+    display: inline-block;
+}
+
+.contactButton {
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.footBottom {
+    justify-content: center;
+    text-align: center;
+    background-color: gray;
+    font-size: 17px;
+    padding-top: 24px;
+}
+
+.footBottom a {
+    text-decoration: none;
+}
+
+.footBottom a:hover {
+    color: beige;
+}
