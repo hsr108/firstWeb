@@ -44,6 +44,8 @@ submit.addEventListener("click", (event) => {
   getWeather(city.value);
 });
 
+getWeather('kharagpur');
+
 const getWthr = async (city) => {
   const url = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e759ca0fdd00586c182d3d799fd57ab5`
@@ -64,3 +66,5 @@ submit.addEventListener("click", (event1) => {
   event1.preventDefault();
   getWthr(city.value);
 });
+
+getWthr('kharagpur');
