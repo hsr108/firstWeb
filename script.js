@@ -19,7 +19,7 @@ date.addEventListener("click", currDate);
 
 const getWeather = async (city) => {
   const response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=c72e92899ff44dfcada65931250801&q=${city}&aqi=no`
+    `https://api.weatherapi.com/v1/current.json?key=c72e92899ff44dfcada65931250801&q=${city}&aqi=no`
   );
 
   const data = await response.json();
@@ -45,25 +45,25 @@ submit.addEventListener("click", (event) => {
 
 getWeather('kharagpur');
 
-// const getWthr = async (city) => {
-//   const url = await fetch(
-//     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e759ca0fdd00586c182d3d799fd57ab5`
-//   );
-//   const data = await url.json();
-//   console.log(data.sys);
+const getWthr = async (city) => {
+  const url = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e759ca0fdd00586c182d3d799fd57ab5`
+  );
+  const data = await url.json();
+  console.log(data.sys);
 
-//   const sunriseTimestamp = data.sys.sunrise;
-//   const sunsetTimestamp = data.sys.sunset;
-//   const sunrise = new Date(sunriseTimestamp * 1000).toLocaleTimeString();
-//   const sunset = new Date(sunsetTimestamp * 1000).toLocaleTimeString();
+  const sunriseTimestamp = data.sys.sunrise;
+  const sunsetTimestamp = data.sys.sunset;
+  const sunrise = new Date(sunriseTimestamp * 1000).toLocaleTimeString();
+  const sunset = new Date(sunsetTimestamp * 1000).toLocaleTimeString();
 
-//   document.getElementById("sunr").innerHTML = `Sunrise: ${sunrise}`;
-//   document.getElementById("suns").innerHTML = `Sunset: ${sunset}`;
-// };
+  document.getElementById("sunr").innerHTML = `Sunrise: ${sunrise}`;
+  document.getElementById("suns").innerHTML = `Sunset: ${sunset}`;
+};
 
-// submit.addEventListener("click", (event1) => {
-//   event1.preventDefault();
-//   getWthr(city.value);
-// });
+submit.addEventListener("click", (event1) => {
+  event1.preventDefault();
+  getWthr(city.value);
+});
 
 getWthr('kharagpur');
