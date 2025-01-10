@@ -1,6 +1,7 @@
-burger = document.querySelector(".burger");
-navBar = document.querySelector(".navBar");
-navContent = document.querySelector(".navContent");
+const burger = document.querySelector(".burger");
+const navBar = document.querySelector(".navBar");
+const navContent = document.querySelector(".navContent");
+const input = document.getElementById("city"); 
 
 burger.addEventListener("click", () => {
   navContent.classList.toggle("visibPhone");
@@ -16,6 +17,7 @@ function currDate() {
   document.getElementById("currentDate").innerHTML = fullDate;
 }
 date.addEventListener("click", currDate);
+currDate()
 
 const getWeather = async (city) => {
   const response = await fetch(
@@ -38,10 +40,21 @@ const getWeather = async (city) => {
   ).innerHTML = `Wind Speed: ${data.current.wind_kph} kph`;
 };
 
+const getData = (city) => {
+  getWeather(city.value);
+  getWthr(city.value);
+}
+
 submit.addEventListener("click", (event) => {
   event.preventDefault();
-  getWeather(city.value);
+  getData(city);
 });
+
+input.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    getData(city);
+  }
+})
 
 getWeather('kharagpur');
 
@@ -61,9 +74,5 @@ const getWthr = async (city) => {
   document.getElementById("suns").innerHTML = `Sunset: ${sunset}`;
 };
 
-submit.addEventListener("click", (event1) => {
-  event1.preventDefault();
-  getWthr(city.value);
-});
 
 getWthr('kharagpur');
