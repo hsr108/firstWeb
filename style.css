@@ -54,7 +54,7 @@ html {
 }
 
 #city {
-    padding: 30px 50px;
+    padding: 20px 50px;
     margin: 40px 0px;
     font-size: 20px;
     background-color: rgb(186, 248, 249);
@@ -98,11 +98,44 @@ html {
     padding: 35px;
 }
 
-.temperature,
-.sunrise,
-.sunset,
-.humidity,
-.windSpeed {
+.temperature
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.sunrise{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.sunset{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.humidity{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding:10px 70px 10px 10px;
+    font-size: 35px;
+}
+
+.windSpeed{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -112,17 +145,32 @@ html {
 }
 
 .temperature img,
-.sunrise img,
-.sunset img,
-.humidity img,
 .windSpeed img {
     width: 50px;
     padding-right: 10px;
 }
 
+.sunrise img{
+    width: 50px;
+    padding-right: 20px;
+}
+
+.sunset img{
+    width: 50px;
+    padding-right: 35px;
+}
+
+.humidity img{
+    width: 50px;
+}
+
+.humidity p{
+    padding-left: 35px;
+}
+
 #services {
     height: 7vh;
-    font-size: 30px;
+    font-size: 3120px;
     padding: 50px;
     background-color: rgb(189, 107, 107);
     text-align: center;
