@@ -95,25 +95,22 @@ body {
     padding: 10px;
 }
 
-.awaazLogo {
+.Logo {
     width: 150px;
     padding: 30px;
     align-self: center;
 }
 
-.awaazIntro {
+.Intro {
     flex-direction: column;
 }
 
-.paraAwaaz {
+.para {
     padding: 15px;
-}
-
-.firstParaAwaaz {
     margin-bottom: 0px;
 }
 
-.awaazLink {
+.companyLink {
     padding: 20px 0px 10px;
     font-size: 18px;
     text-align: center;
